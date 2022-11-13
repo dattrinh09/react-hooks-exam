@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useReducer } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 
@@ -63,7 +63,7 @@ const reducer = (state, action) => {
         case 'delete_todo':
             return {
                 ...state,
-                todos: state.todos.filter( item => item.id !== action.payload)
+                todos: state.todos.filter(item => item.id !== action.payload)
             }
         default:
             throw new Error('Invalid Action')
@@ -105,9 +105,11 @@ const UseReducerExam2 = () => {
                 {todos && todos.map(item => (
                     <li key={item.id}>
                         {item.title}
-                        <br />
-                        <button onClick={() => dispatch(deleteTodo(item.id))}>
-                            Delete
+                        <button
+                            onClick={() => dispatch(deleteTodo(item.id))}
+                            style={{ marginLeft: "20px" }}
+                        >
+                            x
                         </button>
                     </li>
                 ))}

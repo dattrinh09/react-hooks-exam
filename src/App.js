@@ -6,6 +6,7 @@ import UseImperativeHandleExam from "./components/UseImperativeHandleExam";
 import UseMemoExam from "./components/UseMemoExam";
 import UseReducerExam from "./components/UseReducerExam";
 import UseReducerExam2 from "./components/UseReducerExam2";
+import UseReducerExam3 from "./components/UseReducerExam3";
 import Video from "./components/Video";
 import { useClock } from "./hooks/useClock";
 import useFetch from "./hooks/useFetch";
@@ -13,22 +14,27 @@ import { useRandomColor } from "./hooks/useRandomColor";
 
 function App() {
 
+  // Context + useReducer exam
+
+  // useCallBack exam
   // const [count, setCount] = useState(0)
 
   // const handleIncrease = useCallback(() => {
   //   setCount(prevCount => prevCount + 1)
   // }, [])
 
+  // useImperativeHandle exam
   // const videoRef = useRef()
 
   // const handlePlay = () => {
-  //   videoRef.current.play()
+  //   videoRef.current.play() 
   // }
 
   // const handlePause = () => {
   //   videoRef.current.pause()
   // }
 
+  // Custom Hooks exam
   // const { timeString } = useClock()
   // const { color } = useRandomColor()
 
@@ -45,7 +51,7 @@ function App() {
     <div style={{ padding: "50px" }}>
       {/* <UseCallbackExam onIncrease={handleIncrease} />
       <h1>{count}</h1> */}
-      <UseCallbackExam2 />
+      {/* <UseCallbackExam2 /> */}
       {/* <UseMemoExam />
       <Video ref={videoRef}/>
       <button onClick={handlePlay}>Play</button>
@@ -65,8 +71,9 @@ function App() {
         ))}
       </ul> */}
 
-      {/* <h2>useReducer Exam</h2>
-      <UseReducerExam2 /> */}
+      <h2>useReducer Exam</h2>
+      <UseReducerExam2 />
+      {/* <UseReducerExam3 /> */}
       {/* <UseImperativeHandleExam /> */}
     </div>
   );
