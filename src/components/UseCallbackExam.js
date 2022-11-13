@@ -6,7 +6,7 @@ const UseCallbackExam = ({onIncrease}) => {
     return (
         <div>
             <h1>Xin chao cac ban!</h1>
-            <button onClick={onIncrease}>Click me!</button>
+            <button onClick={onIncrease }>Click me!</button>
         </div>
     )
 }
